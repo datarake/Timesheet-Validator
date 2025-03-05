@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stefanini - Timesheet Validation</title>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Stefanini - Timesheet Validation</h1>
+    <div class="file-container">
+        <label for="tempoFile">Select Tempo File (.xlsx):</label>
+        <input type="file" id="tempoFile" accept=".xlsx, .xls" />
+        <p class="status" id="tempoStatus">No file selected</p>
+    </div>
+    
+    <div class="file-container">
+        <label for="timeLaborFile">Select Time & Labor File (.xlsx):</label>
+        <input type="file" id="timeLaborFile" accept=".xlsx, .xls" />
+        <p class="status" id="timeLaborStatus">No file selected</p>
+    </div>
+    
+    <button id="processButton">Process Files</button>
+    
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
