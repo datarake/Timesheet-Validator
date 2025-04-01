@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stefanini - Timesheet Validation</title>
+    <title>Timesheet Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Stefanini - Timesheet Validation</h1>
-    <div class="file-container">
-        <label for="tempoFile">Select Tempo File (.xlsx):</label>
-        <input type="file" id="tempoFile" accept=".xlsx, .xls" />
-        <p class="status" id="tempoStatus">No file selected</p>
+    <h1>Timesheet Validation</h1>
+    <div class="upload-container">
+        <div class="file-container">
+            <label for="tempoFile">Tempo File (.xlsx)</label>
+            <label for="tempoFile" class="file-label">
+                <i class="fas fa-upload"></i> Choose File
+            </label>
+            <input type="file" id="tempoFile" accept=".xlsx, .xls" />
+            <p class="status" id="tempoStatus">No file selected</p>
+        </div>
+        
+        <div class="file-container">
+            <label for="timeLaborFile">Time & Labor File (.xlsx)</label>
+            <label for="timeLaborFile" class="file-label">
+                <i class="fas fa-upload"></i> Choose File
+            </label>
+            <input type="file" id="timeLaborFile" accept=".xlsx, .xls" />
+            <p class="status" id="timeLaborStatus">No file selected</p>
+        </div>
     </div>
     
-    <div class="file-container">
-        <label for="timeLaborFile">Select Time & Labor File (.xlsx):</label>
-        <input type="file" id="timeLaborFile" accept=".xlsx, .xls" />
-        <p class="status" id="timeLaborStatus">No file selected</p>
-    </div>
-    
-    <button id="processButton">Process Files</button>
+    <button id="processButton">
+        <i class="fas fa-sync-alt"></i> Process Files
+    </button>
     
     <div id="output"></div>
 
